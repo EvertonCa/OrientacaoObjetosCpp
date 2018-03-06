@@ -1,8 +1,15 @@
+/*
+Aluno: Everton Cardoso Acchetta
+RA: 22.117.061-6
+Disciplina: CC3642 - Orientação a Objetos
+
+Programa criado para receber o Dia, Mês e Ano do usuário e exibir a data formatada dd/mm/aaaa.
+ */
 #include <iostream>
 
 using namespace std;
 
-//create the class Date
+//Cria a classe Date
 class Date
 {
 public:
@@ -78,6 +85,7 @@ public:
         cout << "Valor inválido! Favor digitar uma data possivel!"<<endl;
     }
 
+    //Exibe a data formatada.
     void displayDate()
     {
         cout << "A data digitada foi: " << dia << "/" << mes << "/" << ano << endl;

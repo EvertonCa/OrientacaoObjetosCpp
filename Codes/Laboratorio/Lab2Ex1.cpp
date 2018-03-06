@@ -1,67 +1,66 @@
-//program that creates a class Employee, with his name, last name and salary. Creates 2 employees, shows their anual
-//salaries and then asks for the rate in which they should get a raise, showing the new salary.
+/*
+Aluno: Everton Cardoso Acchetta
+RA: 22.117.061-6
+Disciplina: CC3642 - Orientação a Objetos
+
+Programa criado para receber o Nome, Sobrenome e Salario de 2 funcionários. Exibir o salário anual, aplicar um aumento
+e exibir o novo salário.
+ */
 #include <iostream>
 
 using namespace std;
 
-//create the class Employee
+//cria a classe Employee
 class Employee
 {
 public:
-    //to create the employee name
     void setNome(string nome)
     {
         this->nome = nome;
     }
 
-    //to create the employee last name
     void setSobrenome(string sobrenome)
     {
         this->sobrenome = sobrenome;
     }
 
-    //to create the employee salary
     void setSalario(double salario)
     {
-        if(salario < 0)
+        if(salario < 0) //verifica se o valor entrado é positivo. Caso contrario, atribui 0
             salario = 0;
 
         this->salario = salario;
     }
 
-    //to receive the employee name
     string getNomeEmployee()
     {
         return nome;
     }
 
-    //to receive the employee last name
     string getSobrenomeEmployee()
     {
         return sobrenome;
     }
 
-    //to receive the employee salary
     double getSalarioEmployee()
     {
         return salario;
     }
 
-    //to create the employee new salary with the raise rate
+    //aplica um aumento em % no salario do funcionário
     void setAumentoSalario(double porcentagem)
     {
         salario = salario + ((porcentagem * 0.01) * salario);
     }
 
-    //to show the anual salary
+    //exibe o salário anual.
     double exibirSalarioAnual()
     {
         return (salario * 12);
     }
 
 private:
-    string nome;
-    string sobrenome;
+    string nome, sobrenome;
     double salario;
 };
 
