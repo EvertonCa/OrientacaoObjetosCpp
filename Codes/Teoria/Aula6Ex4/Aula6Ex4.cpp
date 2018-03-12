@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#include "Funcionario.h"
+#include "Lib/Funcionario.h"
 
 int main()
 {
